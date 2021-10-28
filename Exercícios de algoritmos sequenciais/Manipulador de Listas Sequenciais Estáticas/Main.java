@@ -16,7 +16,6 @@ public class Main {
         }
 
         return num;
-
     }
 
     public static void main(String args[]) {
@@ -24,6 +23,10 @@ public class Main {
 
         //Programa Principal
         byte option = 0;
+
+        //Criando um objeto do tipo lista sequencial estática
+        ListaSeq myList = new ListaSeq();
+
         do {
 
             //Menu
@@ -46,10 +49,14 @@ public class Main {
 
             linha();
 
-            //Variável que será utilizada pela maioria das ações
+            //Variáveis que serão utilizadas por algumas ações
+
             //Pode ser um elemento da lista; um novo valor a ser adicionado; uma posição de um elemento ou um valor correspondente a uma confirmação.
             String valor;
-
+            
+            //Posição de algum elemento da lista
+            int pos;
+            
             //Ações
             switch (option) {
 
@@ -59,31 +66,68 @@ public class Main {
                 
                 //Exibir Lista
                 case 1:
-                    System.out.println("A lista contém {} elementos e esses são os seguintes: ");
+                    System.out.printf("A lista contém %d elementos e esses são os seguintes: ", myList.tamanho());
+                    myList.exibir();
                     break;
 
                 //Inserir elemento
                 case 2:
                     System.out.print("Digite o nome do elemento que você deseja adicionar: ");
                     valor = entrada.nextLine();
+
+                    if (myList.inserir(valor)) {
+                        System.out.println("Valor adicionado com sucesso!");
+                    }
+                    else {
+                        System.out.println("Lista cheia, não podes adicionar mais valores!");
+                    }
+
                     break;
 
                 //Remover
                 case 3:
                     System.out.print("Digite o nome do elemento que você deseja remover: ");
                     valor = entrada.nextLine();
+
+                    if (myList.remover(valor)) {
+                        System.out.println("O elemento foi removido com sucesso!");
+                    }
+                    else {
+                        System.out.println("Esse elemento não está presente na lista!");
+                    }
+
                     break;
 
                 //Exibir elemento
                 case 4:
                     System.out.print("Insira a posição do elemento: ");
-                    valor = entrada.nextLine();
+                    pos = entrada.nextInt();
+
+                    valor = myList.busca(pos);
+
+                    if (valor == null) {
+                        System.out.println("A posição que você inseriu é inválida!");
+                    }
+                    else {
+                        System.out.println("Elemento encontrado -> " + valor);
+                    }
+
                     break;
 
                 //Exibir posição
                 case 5:
                     System.out.print("Digite o nome do elemento que você deseja ver a posição: ");
-                    valor = entrada.nextLine().toUpperCase();
+                    valor = entrada.nextLine();
+
+                    pos = myList.busca(valor);
+
+                    if (pos == -1) {
+                        System.out.println("O elemento não está presente na lista!");
+                    }
+                    else {
+                        System.out.println("Posição do elemento: " + pos);
+                    }
+
                     break;
 
                 //Esvaziar Lista
@@ -92,6 +136,17 @@ public class Main {
                     valor = entrada.nextLine();
 
                     if (valor.equals("S")) {
+
+                        if (myList.vazia()) {
+                            System.out.println("A lista já está vazia!");
+                        }
+                        else {
+                            
+                        }
+
+
+
+
                         System.out.println("Lista esvaziada com sucesso!");
                     }
                     else if (valor.equals("N")) {
@@ -109,12 +164,5 @@ public class Main {
         } while (option != 7);
 
         System.out.println("Programa finalizado! :)");
-        
-        
-
-
-
-
-
     }
 }
