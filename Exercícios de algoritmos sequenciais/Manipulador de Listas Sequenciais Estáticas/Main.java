@@ -3,8 +3,12 @@ import java.util.Scanner;
 public class Main {
     //Funções
 
+    //Mostra uma linha na tela
     static void linha() {
-        System.out.println("-------------------------");
+        for (int i = 0; i < 70; i++) {
+            System.out.print("-");
+        }
+        System.out.println();
     }
 
     static byte validaOpcao(byte num) {
@@ -14,6 +18,8 @@ public class Main {
             System.out.print("Valor inválido. Tente novamente: ");
             num = entrada.nextByte();
         }
+        
+        entrada.close();
 
         return num;
     }
@@ -136,18 +142,7 @@ public class Main {
                     valor = entrada.nextLine();
 
                     if (valor.equals("S")) {
-
-                        if (myList.vazia()) {
-                            System.out.println("A lista já está vazia!");
-                        }
-                        else {
-                            
-                        }
-
-
-
-
-                        System.out.println("Lista esvaziada com sucesso!");
+                        myList.limpar();                       
                     }
                     else if (valor.equals("N")) {
                         System.out.println("A lista não foi esvaziada!");
@@ -162,6 +157,8 @@ public class Main {
             linha();
 
         } while (option != 7);
+
+        entrada.close();
 
         System.out.println("Programa finalizado! :)");
     }

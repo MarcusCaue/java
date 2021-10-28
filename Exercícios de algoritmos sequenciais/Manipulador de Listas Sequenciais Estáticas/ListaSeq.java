@@ -82,6 +82,24 @@ public class ListaSeq{
     }
   
   public String[] getDados() {
-    return this.dados;
+    String listaReal[] = new String[tamanho];
+    
+    for (int i = 0; i < tamanho; i++) {
+      listaReal[i] = dados[i];
+    }
+    
+    return listaReal;
+  }
+
+  public void limpar() {
+    if (vazia()) {
+      System.out.println("A lista já está vazia!");
+    }
+    else {
+      for (String word : getDados()) {
+        remover(word);
+      }
+      System.out.println("Lista esvaziada com sucesso!");
+    }
   }
 }
