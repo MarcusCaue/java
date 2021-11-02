@@ -8,9 +8,11 @@ public class Main {
         for (int i = 0; i < 70; i++) {
             System.out.print("-");
         }
+
         System.out.println();
     }
 
+    //Função para validar a escolha do usuário em relação a uma das opções do menu  
     static byte validaOpcao(byte num) {
         Scanner entrada = new Scanner(System.in);
 
@@ -18,7 +20,7 @@ public class Main {
             System.out.print("Valor inválido. Tente novamente: ");
             num = entrada.nextByte();
         }
-        
+
         entrada.close();
 
         return num;
@@ -34,7 +36,6 @@ public class Main {
         ListaSeq myList = new ListaSeq();
 
         do {
-
             //Menu
             System.out.println("Editor de Lista");
             linha();
