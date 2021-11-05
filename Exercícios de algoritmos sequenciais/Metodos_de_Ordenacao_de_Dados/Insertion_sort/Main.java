@@ -1,22 +1,39 @@
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
 
-        int numbers[] = {4, 5, 2, 1, 0, 21, 44};
+        //Lista a ser ordenada
+        int numbers[] = {42, 58, 63, 9, 12};
 
-        for (int i = 0; i < numbers.length - 1; i++) {
+        //Laço externo
+        for (int i = 1; i < numbers.length; i++) {
 
-            int atual = numbers[i + 1];
+            //Valor que será comparado com os seus antecessores
+            int ni = numbers[i];
 
-            for (int j = i + 1; j > -1; j--) {
+            //Laço interno
+            for (int j = i - 1; j > -1; j--) {
 
-                if (atual < numbers[j]) {
-                    int nj = numbers[j];
-                    numbers[j] = atual;
+                //Valor do laço interno que será comparado com o "ni"
+                int nj = numbers[j];
+
+                if (ni < nj) {
+                    /**
+                     * Caso ni < nj, então eles trocam de posição
+                     */
+                    numbers[j] = ni;
                     numbers[j + 1] = nj;
                 }
-
+                else {
+                    /**
+                     * Caso contrário, ni não precisa ser comparado com os valores restantes
+                     */
+                    break;
+                }          
             }
-
         }
+
+        System.out.println(Arrays.toString(numbers));
     }
 }
