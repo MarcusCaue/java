@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
 
         //Lista a ser ordenada
-        int numbers[] = {42, 58, 63, 9, 12};
+        int numbers[] = {1, 86, 59, 92, 21, 13, 20, 38};
 
         //Laço externo
         for (int i = 1; i < numbers.length; i++) {
@@ -27,7 +27,7 @@ public class Main {
                 }
                 else {
                     /**
-                     * Caso contrário, ni não precisa ser comparado com os valores restantes
+                     * Do contrário, ni não precisa ser comparado com os valores restantes
                      */
                     break;
                 }          

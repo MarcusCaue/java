@@ -8,7 +8,7 @@ public class Main {
         
         //Loop externo
         for (int i = 0; i < numbers.length - 1; i++) {
-            //Escolho um valor na posição i que vai ser comparado com os outros valores da lista para descobrir alguém que seja menor que ele.
+            //Escolho um valor na posição i, cujo será comparado com os outros valores da lista para descobrir alguém que seja menor do que ele.
             int ni = numbers[i];
             int posMenor = i;
 
@@ -18,7 +18,7 @@ public class Main {
                 //Valor que será comparado com ni
                 int nj = numbers[j];
 
-                if (nj > ni) {
+                if (nj < ni) {
                     /**
                      * Caso nj < ni, então nj é considerado como o menor da lista e será comparado com os valores restantes da lista.
                      * Sua posição na lista também é armazenada.
@@ -28,7 +28,7 @@ public class Main {
                 }
             }
 
-            //Momento da troca de posição entre o valor que foi analisado inicialmente com o menor valor encontrado
+            //Momento em que ocorre a troca de posição entre o valor que foi analisado no início do loop externo com o menor valor que foi encontrado
             numbers[posMenor] = numbers[i];
             numbers[i] = ni;
         }

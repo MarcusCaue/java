@@ -2,10 +2,6 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-
-        /**
-         * Obs.: Os elementos vão ser ordenados em ordem crescente.
-         */
         
         //Lista a ser ordenada
         int[] numbers = {1, 86, 59, 92, 21, 13, 20, 38};
@@ -22,7 +18,7 @@ public class Main {
             //Loop interno
             for (int j = 1; j < tamJ; j++) {
 
-                //Valor que está a direita de n1 e que será comparado com o mesmo 
+                //Valor que está a direita de ni e que será comparado com o mesmo 
                 int nj = numbers[j];
 
                 /**
@@ -39,7 +35,7 @@ public class Main {
                 /**
                  * Porém, se nj for maior que ni, então ele passará a ser o ni agora.
                  * A partir daí, esse novo ni vai ser comparado com os outros valores da lista.
-                 * Consequentemente, posNi vai ser a posição que nj tinha também.
+                 * Consequentemente, posNi vai ser a posição que nj tinha.
                 */
                 else {
                     ni = nj;
