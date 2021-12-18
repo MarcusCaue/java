@@ -2,3 +2,5 @@
 
 <p>Aqui você pode conferir as minhas resoluções de exercícios feitos em linguagem Java.</p>
 <p>Futuramente, talvez, eu poste aqui também alguns projetinhos.</p>
+
+<p>Qualquer lista de exercícios que fora resolvida aqui não é de minha autoria. Créditos aos seus devidos autores. Todas as questões estão disponíveis na internet.</p>
