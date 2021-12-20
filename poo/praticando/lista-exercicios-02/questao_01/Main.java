@@ -1,4 +1,4 @@
-package Aluno;
+package questao_01;
 
 import java.util.Scanner;
 

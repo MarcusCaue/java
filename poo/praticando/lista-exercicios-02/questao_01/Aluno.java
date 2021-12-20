@@ -1,4 +1,4 @@
-package aluno;
+package questao_01;
 
 public class Aluno {
     //Atributos

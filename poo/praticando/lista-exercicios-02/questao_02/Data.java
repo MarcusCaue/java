@@ -1,4 +1,5 @@
-package Data;
+package questao_02;
+
 public class Data {
     String data;
 
@@ -86,4 +87,7 @@ public class Data {
         return false;
     }
 
+    public String getData() {
+        return this.data;
+    }
 }

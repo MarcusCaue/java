@@ -1,4 +1,5 @@
-package Data;
+package questao_02;
+
 import java.util.Scanner;
 
 public class Main {
