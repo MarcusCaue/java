@@ -5,7 +5,7 @@
  * Métodos como:
  * 	isnumeric() -> verifica se a variável é um número.
  * 	istitle() -> verifica se a variável (se for uma string) está em formato de título 
- *  isdecimal() -> verifica se a variável é um número real.
+ *	isdecimal() -> verifica se a variável é um número real.
  * 	etc...
  * 
  * Aqui em Java, eu criei uma classe chamada Variavel e os métodos necessários para resolver o exercício.
