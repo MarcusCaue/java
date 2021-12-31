@@ -12,16 +12,30 @@
  * 
  * Resolução do professor: https://youtu.be/tHYxjJxtJko
  * 
- * @data: 24/12/2021
+ * @data: 31/12/2021
 */
+
+import java.util.Scanner;
 
 public class Main {
 	public static void main(String args[]) {
-		String valor = "12";
+		Scanner entrada = new Scanner(System.in);
+
+		System.out.print("Digite alguma coisa: ");
+		String valor = entrada.nextLine();
+
+		entrada.close();
 
 		Variavel v1 = new Variavel(valor);
 
-		v1.tipo();
+		System.out.println("\nTipo primitivo: " + v1.tipo());
+		System.out.println("É somente espaços: " + v1.isSpace());
+		System.out.println("É número: " + v1.isNumeric());
+		System.out.println("É alfabético: " + v1.isAlpha());
+		System.out.println("É alfanumérico: " + v1.isAlphaNum());
+		System.out.println("Tudo em maísculo: " + v1.tudoMaiusculo());
+		System.out.println("Tudo em minúsculo: " + v1.tudoMinusculo());
+		System.out.println("É título: " + v1.isTitle());
 
 	}
 }
